@@ -3,10 +3,10 @@ class CreateCostumes < ActiveRecord::Migration[4.2]
   def change
     create_table :costumes do |s|
       s.string :name
-      s.integer :price
+      s.float :price
       s.string :size
       s.string :image_url
-      s.timestamps
+      s.timestamps null: false
     end
   end
 end
